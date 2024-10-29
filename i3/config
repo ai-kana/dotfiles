@@ -23,6 +23,9 @@ font pango:monospace 12
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Monitor order
+exec --no-startup-id xrandr --output HDMI-0 --auto --right-of DP-1 &
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -120,6 +123,9 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Default workspaces
+workspace $ws1 output DP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
