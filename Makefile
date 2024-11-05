@@ -1,3 +1,4 @@
+#test
 install:
 	rm -rf ~/.config/i3
 	rm -rf ~/.config/kitty
