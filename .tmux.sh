@@ -18,3 +18,20 @@ function tm_unturnov() {
         tmux a
     fi
 }
+
+function tm_com() {
+    session = "com"
+
+    if tmux has-session -t $session 2> /dev/null; then 
+        tmux attach-session -t $session
+    else
+        tmux new-session -d -s $session
+        tmux new-window -t $session:2
+
+        tmux send-keys -t $session:1 'cd ~/code/cs/Comissions' C-m
+        tmux send-keys -t $session:2 'cd ~/U3DS/Servers' C-m
+
+        tmux select-window  -t $session:1
+        tmux a
+    fi
+}
