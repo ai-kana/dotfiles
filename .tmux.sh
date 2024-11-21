@@ -8,7 +8,7 @@ function tm_unturnov() {
     if tmux has-session -t $session 2> /dev/null; then 
         tmux attach-session -t $session
     else
-        tmux new-session -d -s $session 'cd ~/code/cs/Unturnov;nvim .'
+        tmux new-session -d -s $session "ls"
         tmux new-window -t $session:2
 
         tmux send-keys -t $session:1 'cd ~/code/cs/Unturnov;nvim .' C-m
@@ -25,7 +25,7 @@ function tm_com() {
     if tmux has-session -t $session 2> /dev/null; then 
         tmux attach-session -t $session
     else
-        tmux new-session -d -s $session
+        tmux new-session -d -s $session "ls"
         tmux new-window -t $session:2
 
         tmux send-keys -t $session:1 'cd ~/code/cs/Comissions' C-m
