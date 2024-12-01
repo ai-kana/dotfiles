@@ -10,6 +10,8 @@ alias grep='grep --color=auto'
 alias tmk='tmux kill-session'
 alias tmks='tmux kill-server'
 
+alias bnuuy='cat ~/bnuuy.txt'
+
 BOLD="\e[1m"
 RESET="\e[0m"
 

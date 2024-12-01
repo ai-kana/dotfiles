@@ -3,6 +3,7 @@ install:
 	rm -rf ~/.config/kitty
 	rm -rf ~/.config/nvim
 	rm -f ~/.tmux.conf
+	rm -f ~/bnuuy.txt
 	rm -f ~/.tmux.sh
 	rm -f ~/.bashrc
 	cp -r i3 ~/.config/i3
@@ -11,6 +12,7 @@ install:
 	cp .tmux.conf ~/.tmux.conf
 	cp .tmux.sh ~/.tmux.sh
 	cp .bashrc ~/.bashrc
+	cp bnuuy.txt ~/bnuuy.txt
 
 update:
 	rm -rf i3
