@@ -6,6 +6,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias objdump='objdump -M intel'
 
 alias tmk='tmux kill-session'
 alias tmks='tmux kill-server'
