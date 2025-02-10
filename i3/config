@@ -56,7 +56,7 @@ bindsym $mod+Return exec "kitty"
 
 # kill focused window
 bindsym $mod+q kill
-bindsym $mod+Shift+q "kill -9"
+bindsym $mod+Shift+q "kill -n 9 "
 
 # start dmenu (a program launcher)
 #
