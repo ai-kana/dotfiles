@@ -8,7 +8,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias objdump='objdump -M intel'
 
-alias ssh='kitten ssh'
+#alias ssh='kitten ssh'
 
 alias tmk='tmux kill-session'
 alias tmks='tmux kill-server'
@@ -37,4 +37,5 @@ function get_branch() {
     fi
 }
 
-PS1="\[${BOLD}\][\[${MAGENTA}\]\u\$(get_branch) \[${WHITE}\]\W] \$ \[${RESET}\]"
+# PS1="\[${BOLD}\][\[${MAGENTA}\]\u\$(get_branch) \[${WHITE}\]\W] \$ \[${RESET}\]"
+PS1="\[${BOLD}\][\[${MAGENTA}\]\u\$(get_branch) \[${WHITE}\]\W\[${RESET}\]] \$ \[${RESET}\]"

@@ -52,7 +52,10 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec "kitty"
+# bindsym $mod+Return exec "kitty"
+bindsym $mod+Return exec "wezterm"
+bindsym $mod+Shift+d exec "firefox"
+bindsym $mod+Shift+t exec "firefox --new-window twitter.com"
 
 # kill focused window
 bindsym $mod+q kill

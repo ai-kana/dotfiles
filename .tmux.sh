@@ -3,29 +3,29 @@
 #
 
 function tmmeow() {
-    session = "meow"
+    session="meow"
 
     if tmux has-session -t $session 2> /dev/null; then 
         tmux attach-session -t $session
     else
-        tmux new-session -d -s $session "ls"
+        tmux new-session -d -s $session
         tmux new-window -t $session:2
 
         tmux send-keys -t $session:1 'cd ~/code/cs/Meow' C-m
         tmux send-keys -t $session:2 'cd ~/U3DS/Servers/Unturnov' C-m
 
         tmux select-window  -t $session:1
-        tmux a
+        tmux a -t $session
     fi
 }
 
 function tmlocalmod() {
-    session = "localmod"
+    session="localmod"
 
     if tmux has-session -t $session 2> /dev/null; then 
         tmux attach-session -t $session
     else
-        tmux new-session -d -s $session "ls"
+        tmux new-session -d -s $session
         tmux new-window -t $session:2
         tmux new-window -t $session:3
 
@@ -34,6 +34,23 @@ function tmlocalmod() {
         tmux send-keys -t $session:3 'cd ~/U3DS/Servers/LocalModTest' C-m
 
         tmux select-window  -t $session:1
-        tmux a
+        tmux a -t $session
+    fi
+}
+
+function tmfork() {
+    session="fork"
+
+    if tmux has-session -t $session 2> /dev/null; then 
+        tmux attach-session -t $session
+    else
+        tmux new-session -d -s $session
+        tmux new-window -t $session:2
+
+        tmux send-keys -t $session:1 'cd ~/code/cs/UnturnedFork' C-m
+        tmux send-keys -t $session:2 'cd ~/Unturned' C-m
+
+        tmux select-window  -t $session:1
+        tmux a -t $session
     fi
 }
